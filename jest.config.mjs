@@ -8,7 +8,6 @@ const customConfig = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  transformIgnorePatterns: ['node_modules/(?!(unpdf)/)'],
   testMatch: ['**/?(*.)+(test).js?(x)'],
 };
 
