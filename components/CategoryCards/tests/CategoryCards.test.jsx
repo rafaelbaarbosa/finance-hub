@@ -35,7 +35,7 @@ test('only the first card has bg-accent', () => {
 test('displays category totals formatted in BRL', () => {
   render(<CategoryCards categories={mockCategories} />);
 
-  expect(screen.getByText(/800/)).toBeInTheDocument();
-  expect(screen.getByText(/400/)).toBeInTheDocument();
-  expect(screen.getByText(/300/)).toBeInTheDocument();
+  expect(screen.getByText(/R\$\s*800/)).toBeInTheDocument();
+  expect(screen.getByText(/R\$\s*400/)).toBeInTheDocument();
+  expect(screen.getByText(/R\$\s*300/)).toBeInTheDocument();
 });
