@@ -62,3 +62,13 @@ const CATEGORY_COLORS = {
 - `@import "shadcn/tailwind.css"` and `@import "tw-animate-css"` in `globals.css` resolve via `@tailwindcss/postcss` — they are NOT standard CSS imports. Do not move or restructure these imports.
 - `--font-sans` in `@theme inline` was previously self-referencing; the `@layer base html` rule now sets `font-family` directly via `var(--font-geist-sans)` to bypass the issue.
 - `unpdf` is used instead of `pdf-parse` due to Turbopack/ESM compatibility issues.
+
+## Lighthouse CI
+
+O job `lighthouse` na pipeline de CI audita as páginas listadas em `lighthouserc.mjs` a cada PR.
+
+Ao adicionar uma nova página pública ao projeto, inclua a URL em `lighthouserc.mjs`:
+- Adicione a URL ao array `ci.collect.url`
+- Ajuste os thresholds em `ci.assert.assertions` se a página tiver características diferentes
+
+`/dashboard` não está incluída pois requer dados no Zustand store para renderizar. Será adicionada quando testes E2E com dados mockados forem implementados.
