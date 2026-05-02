@@ -65,10 +65,10 @@ const CATEGORY_COLORS = {
 
 ## Lighthouse CI
 
-O job `lighthouse` na pipeline de CI audita as páginas listadas em `lighthouserc.mjs` a cada PR.
+The `lighthouse` job in the CI pipeline audits the pages listed in `lighthouserc.mjs` on every PR.
 
-Ao adicionar uma nova página pública ao projeto, inclua a URL em `lighthouserc.mjs`:
-- Adicione a URL ao array `ci.collect.url`
-- Ajuste os thresholds em `ci.assert.assertions` se a página tiver características diferentes
+When adding a new public page to the project, include its URL in `lighthouserc.mjs`:
+- Add the URL to the `ci.collect.url` array
+- Adjust the thresholds in `ci.assert.assertions` if the page has different characteristics
 
-`/dashboard` não está incluída pois requer dados no Zustand store para renderizar. Será adicionada quando testes E2E com dados mockados forem implementados.
+`/dashboard` is excluded because it requires data in the Zustand store to render. It will be added once E2E tests with mocked data are implemented.
