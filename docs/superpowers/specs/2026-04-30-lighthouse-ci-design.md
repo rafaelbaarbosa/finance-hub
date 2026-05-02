@@ -26,7 +26,7 @@ PR aberto
               └── FAIL → merge bloqueado
 ```
 
-Ferramenta: `@lhci/cli` via `npx lhci autorun` — sem dependência de GitHub App ou token externo.
+Ferramenta: `@lhci/cli` via `npx @lhci/cli autorun` — sem dependência de GitHub App ou token externo.
 
 ---
 
@@ -131,7 +131,7 @@ lighthouse:
         GROQ_API_KEY: ci_placeholder
 
     - name: Run Lighthouse CI
-      run: npx lhci autorun
+      run: npx @lhci/cli autorun
 ```
 
 ---

@@ -145,7 +145,7 @@ jobs:
           GROQ_API_KEY: ci_placeholder
 
       - name: Run Lighthouse CI
-        run: npx lhci autorun
+        run: npx @lhci/cli autorun
 ```
 
 - [ ] **Step 2: Verificar sintaxe do YAML**
