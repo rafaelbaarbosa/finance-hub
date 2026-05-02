@@ -8,7 +8,9 @@
 
 ## Objetivo
 
-Adicionar avaliação automática de Web Vitals e acessibilidade à pipeline de CI existente. O merge de qualquer PR para `main` fica bloqueado se a performance ou acessibilidade da tela de upload regredir abaixo dos thresholds definidos.
+Adicionar avaliação automática de Web Vitals e acessibilidade à pipeline de CI existente para **todas as páginas do projeto**. O merge de qualquer PR para `main` fica bloqueado se a performance ou acessibilidade de qualquer página regredir abaixo dos thresholds definidos.
+
+**Estado atual:** o projeto tem duas páginas — `/` (upload) e `/dashboard`. Como `/dashboard` requer dados no Zustand store para renderizar (sem eles redireciona para `/`), apenas `/` é auditada nesta iteração. `/dashboard` será incluída quando testes E2E com dados mockados forem implementados. O `lighthouserc.mjs` está estruturado para receber novas URLs sem mudanças arquiteturais.
 
 ---
 
